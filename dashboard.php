@@ -1,14 +1,9 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: index.php");
-    exit;
-}
-
+// Usunięcie sprawdzania logowania — każdy ma dostęp
+$_SESSION['username'] = 'admin';
 $username = $_SESSION['username'];
 $is_admin = ($username === 'admin');
-
 
 // This is made by Magiczny_Jasiek, and only he can sell it. If you bought it from other vacban.wtf listing that was not this one: https://vacban.wtf/vacshop/78615/ then be careful using it. It is not official.
 ?>
